@@ -12,11 +12,26 @@
 </head>
 <body>
     <main class="landing">
-        <div class="landing-card">
-            <img src="../images/save_the_date.png" alt="Save the date">
+        <!-- Closed envelope + Open button. Clicking "Open" reveals the
+             save-the-date card (a simple fade-in). -->
+        <div class="envelope-stage" id="stage">
+            <div class="envelope" role="img" aria-label="A sealed envelope">
+                <div class="env-back"></div>
+                <div class="env-front"></div>
+                <div class="env-flap">
+                    <span class="wax-seal monogram">N <span class="amp">&amp;</span> C</span>
+                </div>
+            </div>
         </div>
 
-        <a class="btn" href="../index.html">View Wedding Details &rarr;</a>
+        <button class="btn" id="open-btn" type="button">Open</button>
+
+        <div class="reveal" id="reveal">
+            <div class="landing-card">
+                <img src="../images/save_the_date.png" alt="Save the date">
+            </div>
+            <a class="btn" href="../index.html">View Wedding Details &rarr;</a>
+        </div>
     </main>
 
     <!-- Content lives in content.js (edit that file to update the site) -->
@@ -26,6 +41,12 @@
         if (typeof WEDDING !== "undefined" && WEDDING.coupleNames) {
             document.title = "Save the Date — " + WEDDING.coupleNames;
         }
+
+        // Clicking "Open" hides the envelope + button and fades in the card.
+        var landing = document.querySelector(".landing");
+        document.getElementById("open-btn").addEventListener("click", function () {
+            landing.classList.add("opened");
+        });
     </script>
 </body>
 </html>

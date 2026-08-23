@@ -67,7 +67,7 @@ const WEDDING = {
     mapUrl: "https://www.google.com/maps/search/?api=1&query=Ragged+Mountain+Resort+620+Ragged+Mountain+Rd+Danbury+NH+03230",
     description:
       "We'll gather again on June 19th, 2027 at Ragged Mountain Resort in " +
-      "Danbury, New Hampshire — a mountain setting in the heart of the " +
+      "Danbury, New Hampshire. It's a beautiful a mountain setting in the heart of the " +
       "state for our New England celebration.",
     details: [
       { label: "Travel", value: "Nearest major airports: Manchester–Boston (MHT) and Boston Logan (BOS)." },
