@@ -3,126 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nikita + Connor</title>
+    <title>Save the Date — Nikita & Connor</title>
+    <link rel="icon" href="images/ring_icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="images/ring_icon.png"
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <h1>Nikita & Connor</h1>
-            <p class="wedding-date">Wedding Date: TBD</p>
-            <!-- <p class="tagline">We're getting married!</p> -->
+    <main class="landing">
+        <div class="landing-card">
+            <img src="images/save_the_date.png" alt="Save the date">
         </div>
-    </header>
 
-
-        <section class="carousel-container">
-            <div class="carousel">
-                <div class="carousel-slide active">
-                    <img src="images/before_kiss.jpg" alt="before kiss">
-                </div>
-
-                <div class="carousel-slide">
-                    <img src="images/black_and_white.jpg" alt="black and white">
-                </div>
-
-                <div class="carousel-slide">
-                    <img src="images/down_beach.jpg" alt="down beach">
-                </div>
-
-                <div class="carousel-slide">
-                    <img src="images/eyes_closed.jpg" alt="eyes closed">
-                </div>
-
-                <div class="carousel-slide">
-                    <img src="images/kiss.jpg" alt="kiss">
-                </div>
-
-                <div class="carousel-slide">
-                    <img src="images/laughing.jpg" alt="laughing">
-                </div>
-
-                <div class="carousel-slide">
-                    <img src="images/ring.jpg" alt="ring">
-                    <p class="caption">The Ring!</p>
-                </div>
-
-                <div class="carousel-slide">
-                    <img src="images/ring_on_finger.jpg" alt="ring on finger">
-                </div>
-
-                <div class="carousel-slide">
-                    <img src="images/shoulder.jpg" alt="shoulder">
-                </div>
-
-                <div class="carousel-slide">
-                    <img src="images/turning.jpg" alt="turning">
-                </div>
-            </div>
-            
-            <button class="carousel-button prev" aria-label="Previous photo">&lsaquo;</button>
-            <button class="carousel-button next" aria-label="Next photo">&rsaquo;</button>
-            
-            <div class="carousel-dots"></div>
-        </section>
-
+        <a class="btn" href="main.html">View Wedding Details &rarr;</a>
     </main>
 
-    <footer>
-        <p><a href="mailto:connor.nikita.2022@gmail.com">connor.nikita.2022@gmail.com</a></p>
-    </footer>
-
+    <!-- Content lives in content.js (edit that file to update the site) -->
+    <script src="content.js"></script>
     <script>
-        // Carousel functionality
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.carousel-slide');
-        const dotsContainer = document.querySelector('.carousel-dots');
-        const prevButton = document.querySelector('.carousel-button.prev');
-        const nextButton = document.querySelector('.carousel-button.next');
-
-        // Create dots
-        slides.forEach((_, index) => {
-            const dot = document.createElement('span');
-            dot.classList.add('dot');
-            if (index === 0) dot.classList.add('active');
-            dot.addEventListener('click', () => goToSlide(index));
-            dotsContainer.appendChild(dot);
-        });
-
-        const dots = document.querySelectorAll('.dot');
-
-        function showSlide(n) {
-            slides.forEach(slide => slide.classList.remove('active'));
-            dots.forEach(dot => dot.classList.remove('active'));
-            
-            currentSlide = (n + slides.length) % slides.length;
-            
-            slides[currentSlide].classList.add('active');
-            dots[currentSlide].classList.add('active');
+        // Keep the page title in sync with content.js.
+        if (typeof WEDDING !== "undefined" && WEDDING.coupleNames) {
+            document.title = "Save the Date — " + WEDDING.coupleNames;
         }
-
-        function nextSlide() {
-            showSlide(currentSlide + 1);
-        }
-
-        function prevSlide() {
-            showSlide(currentSlide - 1);
-        }
-
-        function goToSlide(n) {
-            showSlide(n);
-        }
-
-        // Event listeners
-        nextButton.addEventListener('click', nextSlide);
-        prevButton.addEventListener('click', prevSlide);
-
-        // Keyboard navigation
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowLeft') prevSlide();
-            if (e.key === 'ArrowRight') nextSlide();
-        });
     </script>
 </body>
 </html>
