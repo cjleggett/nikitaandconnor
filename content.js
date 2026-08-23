@@ -124,8 +124,9 @@ const FAQS_NEW_DELHI = [
   },
   {
     q: "Where should I stay?",
-    a: "We'll provide rooms at or near the Ashok on March 13th and 14th, and " +
-    "if you want to stay longer reach out to us for suggestions of areas to check out!",
+    a: "We'll provide rooms at or near the Ashok on March 13th and 14th, but if you would" +
+    "rather stay somewhere else, feel free to reach out for suggestions! " +
+    "If you want to stay longer reach out to us for suggestions of areas to check out!",
   },
 ];
 

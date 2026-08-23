@@ -413,6 +413,20 @@ img { display: block; max-width: 100%; }
 .faq-answer ul { list-style: disc; padding-left: 1.4em; margin: 8px 0 0; }
 .faq-answer li { margin: 4px 0; }
 
+/* Closing note below the FAQ groups */
+.faq-footnote {
+    text-align: center;
+    margin-top: 48px;
+    font-family: var(--display);
+    font-style: italic;
+    font-size: 1.3rem;
+    color: var(--ink);
+}
+.faq-footnote a {
+    border-bottom: 1px solid var(--gold);
+    padding-bottom: 1px;
+}
+
 /* =============================================================================
  *  Masonry photo gallery
  * ========================================================================== */
