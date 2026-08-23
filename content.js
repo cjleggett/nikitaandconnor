@@ -33,9 +33,9 @@ const WEDDING = {
     "with you! We wanted to make sure to get as much attention as possible, " +
     "so we're going to have two weddings: one in New Delhi, and one in New " +
     "Hampshire. We would love to have you at one or both of the weddings, " +
-    "but we know at least one of these would be long trip for everyone, so " +
+    "but we know at least one of these would be a long trip for everyone, so " +
     "please don't feel any pressure to come to both. (We want you to feel a " +
-    "little pressure to come to at least one.)",
+    "little pressure to come to at least one!)",
 
   // ---- Celebration #1: New Delhi ----------------------------------------
   newDelhi: {
@@ -48,7 +48,7 @@ const WEDDING = {
     mapUrl: "https://maps.app.goo.gl/MkHzx9MRJFVE2McdA",
     // The main paragraph describing this celebration. Write as much as you like.
     description:
-      "We'll start our celebration with three events over two days at The Ashok, " +
+      "Our New Delhi celebration will consist of three events over two days at The Ashok, " +
       "a historic New Delhi hotel.",
     // Optional extra notes — add or remove lines freely. Leave the list empty
     // (details: []) to hide this part entirely.
@@ -99,7 +99,7 @@ const WEDDING = {
  * ------------------------------------------------------------------------- */
 const FAQS_NEW_DELHI = [
   {
-    q: "I've never been to an indian wedding, what should I expect?",
+    q: "I've never been to an Indian wedding, what should I expect?",
     a: {
       text: "The wedding will consist of three events over two days:",
       bullets: [
@@ -124,7 +124,7 @@ const FAQS_NEW_DELHI = [
   },
   {
     q: "Where should I stay?",
-    a: "We'll provide rooms at or near the Ashok on March 13th and 14th, but if you would" +
+    a: "We'll provide rooms at or near the Ashok on March 13th and 14th, but if you would " +
     "rather stay somewhere else, feel free to reach out for suggestions! " +
     "If you want to stay longer reach out to us for suggestions of areas to check out!",
   },
